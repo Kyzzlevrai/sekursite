@@ -1,20 +1,20 @@
 [
     {
-        "name": "Moi",
-        "folder": "tool1",
-        "description": "Un tool parfait",
-        "source": "https://drive.google.com/u/0/uc?export=download&confirm=no_antivirus&id=199xdbPLb1eLmhs5vvfsRdjPnCcbVj-ng"
+        "name": "Embed maker (Discord)",
+        "folder": "embed",
+        "description": "Easily create embeds for Discord.",
+        "source": "../embed/index.html"
     },
     {
         "name": "Webhook Spammer & Deleter (Discord)",
         "folder": "webhook",
-        "description": "Redirige vers la page webhook.",
+        "description": "The best and fastest webhook spammer & deleter.",
         "source": "../webhook/index.html"
     },
     {
         "name": "Autre tool",
         "folder": "tool2",
         "description": "Autre.",
-        "source": "youtube.com"
+        "source": "https://youtube.com"
     }
 ]
