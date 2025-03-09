@@ -31,7 +31,7 @@ function startSpamming() {
 
     spamInterval = setInterval(() => {
         sendMessage(url, message, username, avatarUrl);
-    }, 1000); // Envoie un message toutes les secondes
+    }, 300); // Envoie un message toutes les secondes
 }
 
 function stopSpamming() {
