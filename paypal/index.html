@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="confirmation-box">
+            <p id="confirmation-message">You've sent <span id="amount">25.00</span> <span id="currency">EUR</span> to <span id="email">lzanpintadofernandez874@gmail.com</span></p>
+        </div>
+        <div class="button-section">
+            <button onclick="sendMoreMoney()">Send More Money</button>
+            <a href="#" id="summary-link">Go to Summary</a>
+        </div>
+        <div class="input-section">
+            <label for="amount-input">Amount:</label>
+            <input type="text" id="amount-input" placeholder="25.00" onchange="updateAmount()">
 
+            <label for="currency-input">Currency:</label>
+            <input type="text" id="currency-input" placeholder="EUR" onchange="updateCurrency()">
+
+            <label for="email-input">Email:</label>
+            <input type="text" id="email-input" placeholder="lzanpintadofernandez874@gmail.com" onchange="updateEmail()">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

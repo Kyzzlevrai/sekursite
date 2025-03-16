@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.header {
+    background-color: #063ea7;
+    height: 100px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 20px);
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.confirmation-box {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#confirmation-message {
+    font-size: 24px;
+    margin: 0;
+    color: #333333;
+    font-weight: bold;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Augmentez cette valeur pour des coins plus arrondis */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px; /* Ajustez pour l'espacement autour du texte */
+    padding-right: 30px; /* Ajustez pour l'espacement autour du texte */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto; /* Utilisez auto pour ajuster la largeur au contenu */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+
+#summary-link {
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 10px; /* Ajoutez un peu d'espace au-dessus du lien */
+}
+
+#summary-link:hover {
+    text-decoration: none;
+}
+
+.input-section {
+    margin-top: 100px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.input-section label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
