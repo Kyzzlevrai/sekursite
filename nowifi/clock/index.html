@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <div class="time-container">
+        <div class="time-inputs">
+            <input type="number" title="H" id="hours" min="00" max="24" value="1"> H
+            <input type="number" title="I" id="minutes" min="00" max="60" value="00"> min
+            <input type="number" title="J" id="seconds" min="00" max="60" value="00"> S
+        </div>
 
+        <div class="display" id="display">00:00:00</div>
+
+        <div class="controls">
+            <button id="launchButton" onclick="startTimer()"> Lauch</button>
+            <button id="pauseButton" onclick="pauseTimer()" disabled> Pause</button>
+            <button id="stopButton" onclick="resetTimer()" disabled> Reset</button>
+            <button id="minsmoreButton" onclick="addTimer()" disabled> +10 min</button>
+            <button id="minslessButton" onclick="removeTimer()" disabled> -10 min</button>
+        </div>
+
+        
+    </div>
+    <audio id="alarmSound" src="song.mp3" preload="auto"></audio>
+    <div class="credit-banner">Made by Kyzz - 2025</div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
