@@ -1,0 +1,231 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    background-image: linear-gradient();
+    color: aliceblue;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+    animation:  Flash 5s ease-in-out;
+}
+
+
+
+.container h1 {
+    display: inline-block;
+    font-size: 170px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+.container h2 {
+    display: inline-block;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeSlideUp2 1.8s ease forwards;
+}
+
+.container a {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeSlideUp3 2.8s ease forwards;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
+
+.time-inputs input {
+    display: inline-block;
+    height: 40px;
+    color: #fff;
+    background: none;
+    width: 70px;
+    padding: 20px;
+    font-family: Helvetica, sans-serif;
+    font-size: 2em;
+    margin: 5px;
+    text-align: center;
+    transform: translateX(-100px);
+    animation: fadeSlideUp2 1s ease forwards;
+    border-style: none;
+}
+
+.time-inputs {
+    font-size: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    background: none;
+    transform: translateX(-100px);
+    animation: fadeSlideUp2 0.9s ease forwards;
+    
+
+}
+.display {
+    display: flex;
+    font-size: 250px;
+    font-weight: bold;
+    margin: 100px 0;
+    letter-spacing: 10px;
+    transform: translateX(-100px);
+    animation: fadeSlideUp4 1s ease forwards;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background: none;
+    border-style: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+.controls button:disabled {
+    color: #707070;
+}
+
+.controls button:hover {
+    transform: scale(110%);
+    animation: underlinee 2s ease-in-out infinite;
+}
+
+.credit-banner {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    z-index: 9999;
+}
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    31% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeSlideUp3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateX(-100px);
+        font-size: 35px;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        font-size: 40px;
+
+    }
+
+}
+
+@keyframes fadeSlideUp4 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateX(-100px);
+        font-size: 35px;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        font-size: 250px;
+
+    }
+
+}
+
+@keyframes Flash {
+    0% {
+        background: black;
+    }
+    35% {
+        background: black;
+    }
+
+    45% {
+        background: rgb(19, 19, 19);
+    }
+
+    55% {
+        background: black;
+    }
+    100% {
+        background: black;
+    }
+}
+
+@keyframes underlinee {
+    0% {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+    }
+    25% {
+        text-decoration-color: #ffffff00;
+    }
+    50% {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+    }
+    75% {
+        text-decoration-color: #ffffff00;
+    }
+    100% {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+    }
+}
