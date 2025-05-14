@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite Text Generator</title>
+  <style>
+    @font-face {
+      font-family: 'Burbank';
+      src: url('font/BurbankBigRegularBlack.otf') format('opentype');
+    }
+
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    canvas {
+      border: 2px solid #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas" width="1920" height="1080"></canvas>
+<button onclick="download()">Télécharger PNG</button>
+
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  const urlParams = new URLSearchParams(window.location.search);
+  const text = urlParams.get("text") || "Fortnite";
+
+  const drawText = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const maxWidth = canvas.width * 0.9; // 90% de la largeur
+    const maxHeight = canvas.height * 0.8; // 80% de la hauteur
+
+    // On commence grand et on réduit jusqu'à ce que ça tienne
+    let fontSize = 300;
+    ctx.font = `${fontSize}px Burbank`;
+    let metrics = ctx.measureText(text);
+
+    while ((metrics.width > maxWidth || fontSize > maxHeight) && fontSize > 10) {
+      fontSize -= 2;
+      ctx.font = `${fontSize}px Burbank`;
+      metrics = ctx.measureText(text);
+    }
+
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    // Contour noir
+    ctx.lineWidth = fontSize * 0.1;
+    ctx.strokeStyle = "black";
+    ctx.strokeText(text, canvas.width / 2, canvas.height / 2);
+
+    // Remplissage blanc
+    ctx.fillStyle = "white";
+    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+  };
+
+  const loadFont = async () => {
+    await document.fonts.load("10px Burbank");
+    drawText();
+  };
+
+  loadFont();
+
+  function download() {
+    const link = document.createElement("a");
+    link.download = "fortnite-text.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }
+</script>
+
+</body>
+</html>
