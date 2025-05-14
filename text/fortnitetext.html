@@ -25,11 +25,11 @@
   </style>
 </head>
 <body>
-<canvas id="canvas" width="1000" height="300"></canvas>
+<canvas id="canvas" width="1920" height="1080"></canvas>
 
 <script>
     document.fonts.ready.then(() => {
-  console.log("Police chargée :", document.fonts.check("80px Burbank"));
+  console.log("Police chargée :", document.fonts.check("150px Burbank"));
     });
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -40,12 +40,12 @@
 
   const drawText = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = '80px Burbank';
+    ctx.font = '500px Burbank';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
     // Contour noir
-    ctx.lineWidth = 8;
+    ctx.lineWidth = 30;
     ctx.strokeStyle = 'black';
     ctx.strokeText(text, canvas.width / 2, canvas.height / 2);
 
@@ -55,7 +55,7 @@
   };
 
   const loadFont = async () => {
-    await document.fonts.load('80px Burbank');
+    await document.fonts.load('500px Burbank');
     drawText();
   };
 
