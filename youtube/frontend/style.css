@@ -1,0 +1,43 @@
+body {
+  background: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #50f6ff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#video-info img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+}

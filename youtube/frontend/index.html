@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Downloader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="modal">
+      <h1>Coller un lien vidéo 📎</h1>
+      <input id="video-url" placeholder="https://www.youtube.com/watch?v=..." />
+      <button onclick="getVideoInfo()">Analyser</button>
 
+      <div id="video-info" style="display:none;">
+        <img id="thumbnail" src="" alt="Miniature" />
+        <h2 id="title"></h2>
+        <p id="author"></p>
+        <p id="duration"></p>
+        <button id="download-btn" onclick="downloadVideo()">
+          Télécharger <span id="quality-text"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
